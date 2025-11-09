@@ -3,13 +3,13 @@ package cat_test
 import (
 	"strings"
 
-	yup "github.com/gloo-foo/framework"
+	gloo "github.com/gloo-foo/framework"
 	. "github.com/yupsh/cat"
 )
 
 func ExampleCat_numberLines() {
 	// echo "Line one\nLine two\nLine three" | cat -n
-	yup.MustRun(
+	gloo.MustRun(
 		Cat(NumberLines, strings.NewReader("Line one\nLine two\nLine three")),
 	)
 	// Output:
@@ -17,4 +17,3 @@ func ExampleCat_numberLines() {
 	//      2	Line two
 	//      3	Line three
 }
-
